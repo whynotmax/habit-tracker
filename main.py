@@ -11,7 +11,6 @@ def main():
     data_storage = DataStorage()
     statistics = Statistics()
     visualization = Visualization()
-    reminder = Reminder()
 
     while True:
         print("1. Add Habit")
@@ -30,8 +29,8 @@ def main():
             statistics.show_statistics()
         elif choice == '4':
             visualization.show_visualization()
-        elif choice == '5':
-            reminder.set_reminder()
+        #elif choice == '5':
+        #    reminder.set_reminder()
         elif choice == '6':
             break
         else:
