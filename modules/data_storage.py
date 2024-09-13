@@ -36,7 +36,11 @@ class DataStorage:
             json.dump(self.configuration, file)
         print("Configuration saved successfully.")
 
-
+    def getDatabaseType(self):
+        return self.configuration["type"]
+    
+    def getDatabaseConfiguration(self):
+        return self.configuration
 
     def load_configuration(self):
         with open("database_configuration.json", "r") as file:
@@ -44,7 +48,7 @@ class DataStorage:
         print("Configuration loaded successfully.")
 
     def save_data(self, data):
-        dbtype = self.configuration["type"]
+        dbtype = self.getDatabaseType()
         if dbtype == "SQLite":
             # TODO: Implement SQLite saving
             return None
@@ -56,7 +60,7 @@ class DataStorage:
             return None
 
     def load_data(self):
-        dbtype = self.configuration["type"]
+        dbtype = self.getDatabaseType()
         if dbtype == "SQLite":
             # TODO: Implement SQLite loading
             return None
