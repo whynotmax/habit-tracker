@@ -4,6 +4,8 @@ from modules.statistics import Statistics
 from modules.visualization import Visualization
 from modules.reminder import Reminder
 
+
+
 def main():
     habit_tracker = HabitTracker()
     data_storage = DataStorage()
